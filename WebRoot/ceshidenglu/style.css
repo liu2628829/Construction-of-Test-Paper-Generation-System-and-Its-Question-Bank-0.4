@@ -1,0 +1,30 @@
+*{margin:0px; padding:0px}
+body,td,th {
+	font-family: 宋体;
+	font-size: 12px;
+	color: #000000;
+}
+.log {
+	background-image: url(images/login.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height:650px;
+	text-align:center;
+}
+.di {background:url(images/di_03.jpg) repeat-x; line-height:28px; text-align:center; color:#FFFFFF; padding-right:20px}
+/*.login-input{background:url(images/login_03.jpg) no-repeat; width:121px; height:21px; line-height:21px; padding-left:6px; color:#FFFFFF; border:0px;}*/
+.login-input{ background-color:#292929; width:121px; height:21px; line-height:21px; padding-left:6px; color:#FFFFFF; border:1px #7ebbd8 solid;}
+.login-button{background:url(images/login_07.jpg) no-repeat;width:58px; height:21px; line-height:21px;color:#FFFFFF; border:0px; cursor:pointer}
+.left {background:url(images/left_07.jpg) no-repeat; width:150px; height:25px; line-height:25px; padding-left:30px; color:#FFFFFF; font-weight:bold;font-size:13px}
+.left1 {background:url(images/left_10.jpg) repeat-y; padding:10px}
+.left2 {background:url(images/qw_03.jpg) no-repeat 10px 10px; padding-left:20px; color:#09558f; font-size:13px; line-height:26px}
+.left2 a{color:#09558f;text-decoration: none;}
+.left2 a:hover{color:#000000;text-decoration: none; background-color:#cccccc}
+.right {background:url(images/right_07.jpg) no-repeat 10px 5px; border:#a1d9ff solid 1px; line-height:30px; padding-left:34px; font-weight: bold}
+.rightq {background:url(images/xing.gif) no-repeat 15px 10px; border-top:#a1d9ff solid 2px; line-height:30px; padding-left:34px; font-weight: bold}
+.right0 {background:url(images/right_11.jpg) repeat-x; height:28px; line-height:28px; font-weight:bold;text-align:left; padding-left:20px}
+.right1 {background:url(images/right_11.jpg) repeat-x; height:28px; line-height:28px; font-weight:bold;text-align:center;}
+.right2 {background:url(images/right_11.jpg) repeat-x; height:28px; line-height:28px; font-weight:bold; border-right:#bad6ec solid 1px;text-align:center;}
+.right3 { height:26px; line-height:26px; border-right:#bad6ec solid 1px;border-bottom:#bad6ec solid 1px;padding-left:5px;text-align:left;}
+.right4 { height:26px; line-height:26px;border-bottom:#bad6ec solid 1px;padding-left:5px;text-align:left;}
+.anniu {background: url(images/anniu.jpg) no-repeat; width:74px; height:26px; line-height:26px; text-align:center; color:#024d86; font-weight:bold; border:0px}

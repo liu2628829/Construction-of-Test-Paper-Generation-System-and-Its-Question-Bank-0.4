@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+<dwr>
+  <allow>
+    <create creator="spring" javascript="courseManager">
+      <param name="beanName" value="courseManager"/> 
+    </create>
+    
+    <create creator="spring" javascript="chapterManager">
+      <param name="beanName" value="chapterManager"/>
+    </create>
+    
+    <create creator="spring" javascript="sectionManager">
+      <param name="beanName" value="sectionManager"/>
+    </create>
+    <create creator="spring" javascript="knowledgePointManager">
+      <param name="beanName" value="knowledgePointManager"/>
+    </create>
+    
+    <create creator="spring" javascript="policyManager">
+      <param name="beanName" value="policyManager"/>
+    </create>
+     <create creator="spring" javascript="typeManager">
+      <param name="beanName" value="typeManager"/>
+    </create>
+    
+     <create creator="spring" javascript="gaModleManager">
+      <param name="beanName" value="gaModleManager"/>
+    </create>
+    
+     <create creator="spring" javascript="testQuestionManager">
+      <param name="beanName" value="testQuestionManager"/>
+    </create>
+    
+    <convert  match= "com.lsxy.ga.model.Course"
+    	javascript="Course" converter="bean" 
+     />
+     <convert  match= "com.lsxy.ga.model.Chapter"
+    	javascript="Chapter" converter="bean"
+    />
+   
+     <convert  match= "com.lsxy.ga.model.Section"
+    	javascript="Section" converter="bean" 
+     />
+     <convert  match= "com.lsxy.ga.model.KnowledgePoint"
+    	javascript="KnowledgePoint" converter="bean" 
+     />
+     
+      <convert  match="com.lsxy.ga.model.Type"
+    	javascript="Type" converter="bean" 
+     />
+      <convert  match= "com.lsxy.ga.model.Dwrmodle"
+    	javascript="Dwrmodle" converter="bean" 
+     />
+  </allow>
+</dwr>

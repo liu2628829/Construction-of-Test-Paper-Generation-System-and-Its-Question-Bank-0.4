@@ -1,0 +1,9 @@
+<script type="text/javascript" src="dwr/engine.js"></script>
+<script type="text/javascript" src="dwr/util.js"></script>
+<script type="text/javascript" src="dwr/interface/courseManager.js"></script>
+<script type="text/javascript" src="dwr/interface/chapterManager.js"></script>
+<script type="text/javascript" src="dwr/interface/sectionManager.js"></script>
+<script type="text/javascript" src="dwr/interface/knowledgePointManager.js"></script>
+<script type="text/javascript" src="dwr/interface/typeManager.js"></script>
+<script type="text/javascript" src="dwr/interface/gaModleManager.js"></script>
+<script type="text/javascript" src="dwr/interface/testQuestionManager.js"></script>

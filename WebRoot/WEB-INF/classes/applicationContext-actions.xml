@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xmlns:aop="http://www.springframework.org/schema/aop"
+	     xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+    <bean name="/course" class="com.lsxy.ga.web.actions.CourseAction" scope="prototype">
+    	<property name="courseManager" ref="courseManager"/>
+   </bean>  
+   
+   <bean name="/chapter" class="com.lsxy.ga.web.actions.ChapterAction" scope="prototype">
+    	 <property name="chapterManager" ref="chapterManager"/>
+   </bean>    
+   
+   <bean name="/section" class="com.lsxy.ga.web.actions.SectionAction" scope="prototype">
+    	 <property name="sectionManager" ref="sectionManager"/>
+   </bean>
+   
+    <bean name="/knowledgePoint" class="com.lsxy.ga.web.actions.KnowledgePointAction" scope="prototype">
+    	 <property name="knowledgePointManager" ref="knowledgePointManager"/>
+   </bean>
+   
+    <bean name="/testQuestion" class="com.lsxy.ga.web.actions.TestQuestionAction" scope="prototype">
+    	 <property name="testQuestionManager" ref="testQuestionManager"/>
+    	  
+   </bean>
+   <bean name="/gaModle" class="com.lsxy.ga.web.actions.GaModleAction" scope="prototype">
+    	 <property name="gaModleManager" ref="gaModleManager"/>
+   </bean>
+   
+    <bean name="/user" class="com.lsxy.ga.web.actions.UserAction" scope="prototype">
+    	 <property name="userManager" ref="userManager"/>
+   </bean>
+   
+     <bean name="/policy" class="com.lsxy.ga.web.actions.PolicyAction" scope="prototype">
+     	<property name="gaManager" ref="gaManager"/>
+    	 <property name="policyManager" ref="policyManager"/>
+    	 <property name="typeManager" ref="typeManager"/>
+    	 <property name="courseManager" ref="courseManager"/>
+    	 <property name="sectionManager" ref="sectionManager"/>
+    	 <property name="chapterManager" ref="chapterManager"/>
+    	 <property name="knowledgePointManager" ref="knowledgePointManager"/>
+   </bean>
+   
+    <bean name="/type" class="com.lsxy.ga.web.actions.TypeAction" scope="prototype">
+    	 <property name="typeManager" ref="typeManager"/>
+   </bean>
+   
+   <bean name="/test" class="com.lsxy.ga.web.actions.TestAction" scope="prototype">
+		 <property name="typeManager" ref="typeManager"/>
+		  <property name="testManager" ref="testManager"/>
+		<property name="testQuestionManager" ref="testQuestionManager"/>
+   </bean>
+
+</beans>

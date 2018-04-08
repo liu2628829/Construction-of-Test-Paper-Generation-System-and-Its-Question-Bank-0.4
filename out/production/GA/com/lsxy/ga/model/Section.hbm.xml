@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="t_section" name="com.lsxy.ga.model.Section">
+    <id access="field" name="id">
+      <generator class="native"/>
+    </id>
+    <property name="name" access="field"/>
+    <many-to-one column="chapterId" access="field" name="cp"/>
+    <set access="field" lazy="false" inverse="true" name="children">
+      <key column="sectionId"/>
+      <one-to-many class="com.lsxy.ga.model.KnowledgePoint"/>
+    </set>
+  </class>
+</hibernate-mapping>

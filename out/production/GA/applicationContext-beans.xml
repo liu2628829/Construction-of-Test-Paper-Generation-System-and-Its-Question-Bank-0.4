@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xmlns:aop="http://www.springframework.org/schema/aop"
+	     xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	<bean id="courseManager" class="com.lsxy.ga.manager.impl.CourseManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="chapterManager" class="com.lsxy.ga.manager.impl.ChapterManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="sectionManager" class="com.lsxy.ga.manager.impl.SectionManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="knowledgePointManager" class="com.lsxy.ga.manager.impl.KnowledgePointManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="testQuestionManager" class="com.lsxy.ga.manager.impl.TestQuestionManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="gaModleManager" class="com.lsxy.ga.manager.impl.GaModleManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="userManager" class="com.lsxy.ga.manager.impl.UserManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+		
+	</bean>
+	
+	<bean id="policyManager" class="com.lsxy.ga.manager.impl.PolicyManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+		
+	</bean>
+		<bean id="typeManager" class="com.lsxy.ga.manager.impl.TypeManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>	
+	</bean>	
+	
+	<bean id="testManager" class="com.lsxy.ga.manager.impl.TestManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>	
+	</bean>	
+   	
+	<bean id="gaManager" class="com.lsxy.ga.manager.impl.GaManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+		<property name="typeManager" ref="typeManager"/>
+		<property name="policyManager" ref="policyManager"/>
+		<property name="gaModleManager" ref="gaModleManager"/>
+		<property name="testQuestionManager" ref="testQuestionManager"/>
+		<property name="knowledgePointManager" ref="knowledgePointManager"/>
+	</bean>
+</beans>

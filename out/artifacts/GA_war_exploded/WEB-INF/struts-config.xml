@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="CourseForm" type="com.lsxy.ga.web.forms.CourseActionForm"></form-bean>
+		<form-bean name="ChapterForm" type="com.lsxy.ga.web.forms.ChapterActionForm"></form-bean>
+		<form-bean name="KnowledgePointForm" type="com.lsxy.ga.web.forms.KnowledgePointActionForm"></form-bean>
+		<form-bean name="SectionForm" type="com.lsxy.ga.web.forms.SectionActionForm"></form-bean>
+		<form-bean name="TestQuestionForm" type="com.lsxy.ga.web.forms.TestQuestionActionForm"></form-bean>
+		<form-bean name="GaModleForm" type="com.lsxy.ga.web.forms.GaModleActionForm"></form-bean>
+		<form-bean name="UserForm" type="com.lsxy.ga.web.forms.UserActionForm"></form-bean>
+		<form-bean name="TypeForm" type="com.lsxy.ga.web.forms.TypeActionForm"></form-bean>
+		<form-bean name="PolicyForm" type="com.lsxy.ga.web.forms.PolicyActionForm"></form-bean>
+		<form-bean name="TestForm" type="com.lsxy.ga.web.forms.TestActionForm"></form-bean>
+	</form-beans>
+	<global-exceptions>
+		<exception 
+			key="errors.detail" 
+			type="java.lang.Exception" 
+			path="/common/exception.jsp"
+			scope="request"
+			handler="com.lsxy.ga.web.SystemExceptionHandler"
+		></exception>
+	</global-exceptions>
+	<global-forwards>
+		<forward name="pub_add_success" path="/common/pub_add_success.jsp"></forward>
+		<forward name="pub_update_success" path="/common/pub_update_success.jsp"></forward>
+		<forward name="pub_del_success" path="/common/pub_del_success.jsp"></forward>
+	</global-forwards>
+	
+	<action-mappings>
+		<action 
+			path="/course"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="CourseForm"
+			scope="request"
+			parameter="method"
+		>
+			<forward name="index" path="/course/index.jsp"></forward>
+			<forward name="add_input" path="/course/add_input.jsp"/>
+			<forward name="update_input" path="/course/update_input.jsp"/>
+		</action>
+		
+		<action 
+			path="/chapter"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="ChapterForm"
+			scope="request"
+			parameter="method"
+		>
+			<forward name="index" path="/chapter/index.jsp"></forward>
+			<forward name="add_input" path="/chapter/add_input.jsp"/>
+		</action>
+		
+		<action 
+			path="/knowledgePoint"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="KnowledgePointForm"
+			scope="request"
+			parameter="method"
+		>
+			<forward name="index" path="/knowledgepoint/index.jsp"></forward>
+			<forward name="add_input" path="/knowledgepoint/add_input.jsp"/>
+		</action>
+		
+		<action 
+			path="/section"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="SectionForm"
+			scope="request"
+			parameter="method"
+		>
+			<forward name="index" path="/section/index.jsp"></forward>
+			<forward name="add_input" path="/section/add_input.jsp"/>
+		</action>
+		
+		<action 
+			path="/testQuestion"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="TestQuestionForm"
+			scope="request"
+			parameter="method"
+		>
+			<forward name="add_result_input" path="/testquestion/add_result_input.jsp"></forward>
+			<forward name="detail" path="/testquestion/detail.jsp"></forward>
+			<forward name="index" path="/testquestion/index.jsp"></forward>
+			<forward name="add_input" path="/testquestion/add_input.jsp"/>
+			
+		</action>
+		
+		<action 
+			path="/gaModle"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="GaModleForm"
+			scope="request"
+			parameter="method"
+		>
+			<forward name="index" path="/gamodle/index.jsp"></forward>
+			<forward name="add_input" path="/gamodle/add_input.jsp"></forward>
+			<forward name="update_input" path="/gamodle/update_Input.jsp"/>
+		</action>
+		
+		<action 
+			path="/user"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="UserForm"
+			scope="request"
+			parameter="method"
+		>
+			<forward name="index" path="/user/index.jsp"></forward>
+			<forward name="add_input" path="/user/add_input.jsp"/>
+			<forward name="update_input" path="/user/update_Input.jsp"/>
+		</action>
+	
+	<action 
+			path="/policy"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="PolicyForm"
+			scope="request"
+			parameter="method"
+		>
+			<forward name="index" path="/policy/index.jsp"></forward>
+			<forward name="detail" path="/policy/detail.jsp"></forward>
+			<forward name="add_input" path="/policy/add_input.jsp"/>
+			<forward name="next_input" path="/policy/next_input.jsp"/>
+			<forward name="first" path="/policy/first.jsp"></forward>
+			<forward name="update_input" path="/policy/update_Input.jsp"/>
+			<forward name="inti_input" path="/policy/inti_input.jsp"/>
+			<forward name="intiPolicyNext_input" path="/policy/intiPolicyNext_input.jsp"/>
+			<forward name="success_test" path="/policy/success_test.jsp"></forward>
+		</action>
+		
+			<action 
+			path="/type"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="TypeForm"
+			scope="request"
+			parameter="method"
+		>
+			<forward name="index" path="/type/index.jsp"></forward>
+			<forward name="add_input" path="/type/add_input.jsp"/>
+			<forward name="update_input" path="/type/update_input.jsp"/>
+		</action>
+		
+			<action 
+			path="/test"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="TestForm"
+			scope="request"
+			parameter="method"
+		>
+			<forward name="index" path="/test/index.jsp"></forward>
+			<forward name="detail" path="/test/detail.jsp"/>
+			<forward name="detailAnswer" path="/test/detailAnswer.jsp"/>
+			<forward name="update_input" path="/test/update_Input.jsp"/>
+		</action>
+		
+	</action-mappings>
+	
+    <message-resources parameter="MessageResources" />
+</struts-config>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="T_testquestion" name="com.lsxy.ga.model.TestQuestion">
+    <id access="field" name="id">
+      <generator class="native"/>
+    </id>
+    <many-to-one access="field" name="type"/>
+    <property name="content" access="field"/>
+    <property name="difficulty" access="field"/>
+    <property name="differentiate" access="field"/>
+    <property name="count" access="field"/>
+    <property name="lateTime" access="field"/>
+    <property name="adviceTime" access="field"/>
+    <property name="result" access="field"/>
+    <many-to-one access="field" name="knowledgePoint"/>
+    <many-to-one access="field" name="section"/>
+    <many-to-one access="field" name="chapter"/>
+    <many-to-one access="field" name="course"/>
+    <property name="state" access="field"/>
+  </class>
+</hibernate-mapping>
